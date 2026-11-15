@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《解深密经诠义》讲经笔记</title>
+<style>
+:root{--bg:#faf7f0;--ink:#2a2622;--mute:#7a7167;--line:#e2dacb;--acc:#8a3b20;--card:#fffdf8;--board:#f3f8ff;--boardline:#b9cde6;--hand:#fff9d9;--handline:#e6d88f}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1a17;--ink:#e9e3d8;--mute:#9c9386;--line:#3a352e;--acc:#e0916f;--card:#24211d;--board:#1d2733;--boardline:#3b5270;--hand:#2e2a17;--handline:#5c5326}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Noto Serif SC","Songti SC","Source Han Serif SC",serif}
+.wrap{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1180px;margin:0 auto}
+nav{position:sticky;top:0;height:100vh;overflow:auto;padding:22px 14px;border-right:1px solid var(--line);font-family:system-ui,sans-serif;font-size:13.5px}
+nav h1{font:600 17px/1.4 inherit;margin:0 0 4px;color:var(--acc)}
+nav p{margin:0 0 14px;color:var(--mute);font-size:12px;line-height:1.5}
+nav a,nav span.ep{display:flex;justify-content:space-between;gap:6px;padding:3px 8px;border-radius:6px;color:var(--ink);text-decoration:none}
+nav a:hover{background:var(--line)}
+nav span.ep{color:var(--mute)}
+nav i{font-style:normal;font-size:11px;color:var(--mute)}
+nav a i{color:var(--acc)}
+main{padding:34px 40px 80px;min-width:0}
+h2{font-size:26px;margin:0 0 4px}
+.meta{color:var(--mute);font:13px system-ui,sans-serif;margin-bottom:22px}
+.meta a{color:var(--acc)}
+h3{font-size:19px;margin:38px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--acc)}
+h4{font-size:16px;margin:22px 0 4px}
+.hint{color:var(--mute);font:13px system-ui,sans-serif;margin:0 0 10px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font:14px/1.7 system-ui,sans-serif;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.b{border:1px solid var(--boardline);background:var(--board);border-radius:10px;padding:12px 16px}
+.b.h{border-color:var(--handline);background:var(--hand)}
+.b small{display:block;font:12px system-ui,sans-serif;color:var(--mute);margin-bottom:4px}
+.b p{margin:2px 0}
+.b .r{color:#c0392b}.b .g{color:#1e8e5a}
+@media (prefers-color-scheme:dark){.b .r{color:#ff8f80}.b .g{color:#6fd6a2}}
+.seg{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.seg a.t{font:13px ui-monospace,monospace;color:var(--acc);text-decoration:none;padding-top:5px}
+.seg b.k{display:block}
+.seg p{margin:4px 0}
+ul{margin:4px 0;padding-left:1.3em}
+@media (max-width:820px){.wrap{display:block}nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr))}main{padding:24px 18px 60px}}
+
+#pl{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 8px;margin-bottom:10px;border-bottom:1px solid var(--line)}
+#pl .box{position:relative;width:min(100%,var(--pw,560px));aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden}
+#pl .box>*{position:absolute;inset:0;width:100%;height:100%;border:0}
+#pl .bar{display:flex;gap:8px;align-items:center;font:12px system-ui,sans-serif;color:var(--mute);margin-top:6px}
+#pl button{font:12px system-ui,sans-serif;padding:2px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);cursor:pointer}
+.b.on{outline:2px solid var(--acc)}
+nav a.cur{background:var(--line);font-weight:600}
+.b small a.t{font:12px ui-monospace,monospace;color:var(--acc);text-decoration:none;margin-right:6px;cursor:pointer}
+.seg.on{background:color-mix(in srgb,var(--acc) 9%,transparent)}
+.seg a.t{cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<h1>解深密经诠义</h1>
+<p>译经院视讯 · 讲经16 · 释成观法师<br>共 44 集（001–047，缺 041、042、045）<br>已整理 %%DONE%% / 44</p>
+<div class="list" id="list"></div>
+</nav>
+<main>
+<div id="pl"><div class="box"><div id="yt"></div></div>
+<div class="bar"><span id="now">点任一时间点开始播放</span><span style="flex:1"></span><button data-w="360px">小</button><button data-w="560px">中</button><button data-w="100%">大</button></div></div>
+
+
+%%SECTIONS%%
+
+</main>
+</div>
+<script>
+const eps=["001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016","017","018","019","020","021","022","023","024","025","026","027","028","029","030","031","032","033","034","035","036","037","038","039","040","043","044","046","047"];
+const nosub=new Set(["003","010","027","028","029","030","031","037","038","039","040","043","044","046","047"]);
+const done=%%DONESET%%;
+document.getElementById('list').innerHTML=eps.map(n=>done[n]?`<a href="#ep-${n}">第 ${n} 集<i>${done[n]}</i></a>`:`<span class="ep">第 ${n} 集<i>${nosub.has(n)?'无字幕':'待整理'}</i></span>`).join('');
+</script>
+
+<script>
+let P=null,ready=false,cur=null,pending=null;
+const secs=[...document.querySelectorAll('main section')];
+function curSec(){const h=location.hash.slice(1);return secs.find(s=>s.id===h)||secs[0]}
+function show(){const s=curSec();secs.forEach(x=>x.hidden=x!==s);document.querySelectorAll('#list a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+s.id));
+ const v=s.dataset.v;if(v!==cur){cur=v;if(ready)P.cueVideoById(v);document.getElementById('now').textContent='第 '+s.dataset.n+' 集 · 点任一时间点开始播放';items.forEach(x=>x.el.classList.remove('on'))}window.scrollTo(0,0)}
+function onYouTubeIframeAPIReady(){P=new YT.Player('yt',{videoId:cur,playerVars:{rel:0,playsinline:1},events:{onReady(){ready=true;if(pending){go(...pending);pending=null}}}});}
+function go(v,t){if(!ready){pending=[v,t];return}
+ if(v!==cur){cur=v;P.loadVideoById({videoId:v,startSeconds:t})}else{P.seekTo(t,true);P.playVideo()}}
+const items=[...document.querySelectorAll('a.t')].map(a=>({a,el:a.closest('.seg,.b'),seg:!!a.closest('.seg'),v:a.dataset.v,t:+a.dataset.t}));
+items.forEach(s=>s.a.addEventListener('click',e=>{e.preventDefault();go(s.v,s.t);mark(s)}));
+function mark(s){items.forEach(x=>x.el.classList.toggle('on',x===s));const k=s.el.querySelector('.k');document.getElementById('now').textContent='第 '+s.a.closest('section').dataset.n+' 集 · '+s.a.textContent+' · '+(k?k.textContent:'')}
+setInterval(()=>{if(!ready||!P.getCurrentTime||P.getPlayerState()!==1)return;const t=P.getCurrentTime();let hit=null;for(const s of items){if(s.seg&&s.v===cur&&s.t<=t+0.5)hit=s}if(hit&&!hit.el.classList.contains('on'))mark(hit)},1000);
+addEventListener('hashchange',show);show();
+document.querySelectorAll('#pl button').forEach(b=>b.onclick=()=>{document.getElementById('pl').style.setProperty('--pw',b.dataset.w);try{localStorage.setItem('pw',b.dataset.w)}catch(e){}});
+try{const w=localStorage.getItem('pw');if(w)document.getElementById('pl').style.setProperty('--pw',w)}catch(e){}
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
